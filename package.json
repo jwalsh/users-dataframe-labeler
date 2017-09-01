@@ -1,0 +1,20 @@
+{
+  "name": "users-dataframe-labeler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "tsc src/index.ts"
+  },
+  "author": "Jason Walsh <j@wal.sh>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "@types/supertest": "^2.0.3",
+    "jest": "^20.0.4",
+    "supertest": "^3.0.0",
+    "ts-jest": "^20.0.14",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  }
+}
