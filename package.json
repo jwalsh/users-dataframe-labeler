@@ -4,7 +4,13 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "start": "tsc src/index.ts"
+    "start": "./node_modules/.bin/tsc src/index.ts && node src/index.js",
+    "swagger": "./node_modules/.bin/swagger project edit spec",
+    "swagger-start": "./node_modules/.bin/swagger project start spec",
+    "install-codegen": "wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.3/swagger-codegen-cli-2.2.3.jar -O swagger-codegen-cli.jar",
+    "install-prism": "curl https://raw.githubusercontent.com/stoplightio/prism/master/install.sh | sh",
+    "codegen-typescript": "java -jar swagger-codegen-cli.jar generate   -c config.json -l typescript -i api/swagger/swagger.yaml -o api"
+
   },
   "author": "Jason Walsh <j@wal.sh>",
   "license": "ISC",
@@ -16,5 +22,8 @@
     "ts-jest": "^20.0.14",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "swagger": "^0.7.5"
   }
 }
