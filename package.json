@@ -9,8 +9,7 @@
     "swagger-start": "./node_modules/.bin/swagger project start spec",
     "install-codegen": "wget http://central.maven.org/maven2/io/swagger/swagger-codegen-cli/2.2.3/swagger-codegen-cli-2.2.3.jar -O swagger-codegen-cli.jar",
     "install-prism": "curl https://raw.githubusercontent.com/stoplightio/prism/master/install.sh | sh",
-    "codegen-typescript": "java -jar swagger-codegen-cli.jar generate   -c config.json -l typescript -i api/swagger/swagger.yaml -o api"
-
+    "codegen": "java -jar swagger-codegen-cli.jar generate -c config.json -l typescript-node -i spec/api/swagger/swagger.yaml -o src/api"
   },
   "author": "Jason Walsh <j@wal.sh>",
   "license": "ISC",
@@ -24,6 +23,8 @@
     "typescript": "^2.5.2"
   },
   "dependencies": {
+    "@jwalsh/stochastic": "^0.2.2",
+    "immutable": "^3.8.1",
     "swagger": "^0.7.5"
   }
 }
